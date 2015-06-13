@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find an ATM</title>
+    <style>
+    html, body, #content, .tab-content, #list, #map {
+      height: 100%;
+    }
+    .btn {
+      float:right; 
+      margin: 2px
+    }
+    .footer {
+      text-align: center;
+    }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="content">
+      
+            <div class="alert alert-success" role="alert">20 ATM(s) found.</div>
+            
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#list" data-toggle="tab">List</a></li>
+        <li><a href="#map" data-toggle="tab">Map</a></li>
+        <a href="index-js.php" class="btn btn-success">Refresh</a>
+      </ul>
+      
+      <div class="tab-content">
+        <!-- ATMs as list -->
+        <div role="tabpanel" class="tab-pane active" id="list">
+          <ul class="list-group">
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">A</span> 
+                <span class="label label-default">Hospital Carlos Alcantar</span>
+              </h3>
+              <p>los, Los Constructores 1161, Lima</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=A:ChIJz_SqmevGBZERUW8EdbLA6iQ#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">B</span> 
+                <span class="label label-default">Hospital Nivel I Carlos Alcántara Butterfield</span>
+              </h3>
+              <p>Los Constructores 1201, La Molina</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=B:ChIJy2zboevGBZER-MXT61xxzZw#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">C</span> 
+                <span class="label label-default">Terapia del Dolor</span>
+              </h3>
+              <p>Aruba 152, Lima</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=C:ChIJz4xHHt3GBZERSdXfpI2CqBs#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">D</span> 
+                <span class="label label-default">Clínica Docente UPC</span>
+              </h3>
+              <p>Separadora Industrial 2043, Lima</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=D:ChIJhTzMovXGBZER3wkwMMqChlU#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">E</span> 
+                <span class="label label-default">Corpus et Vita</span>
+              </h3>
+              <p>La Molina</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=E:ChIJKY_PLtzGBZERU3xYEZ7hDrw#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">F</span> 
+                <span class="label label-default">Posta Médica de villa victoria</span>
+              </h3>
+              <p>Matazango, La Molina</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=F:ChIJpVaywlnGBZERADThl02B5IE#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">G</span> 
+                <span class="label label-default">Puesto de Salud ATE</span>
+              </h3>
+              <p>Olivers Peru, Ate</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=G:ChIJMby_QozGBZERMn7_RJZSZlQ#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">H</span> 
+                <span class="label label-default">CENTRO MEDICO SANNA</span>
+              </h3>
+              <p>Av. Raúl Ferrero Rebagliati N° 1256 - La Molina.</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=H:ChIJ872j4xrHBZERhqP9GAnKJMw#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">I</span> 
+                <span class="label label-default">Clinica San Felipe</span>
+              </h3>
+              <p>Javier Prado 4841, La Molina</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=I:ChIJGxiLsVTGBZER7skn9zTD6m4#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">J</span> 
+                <span class="label label-default">Centro Medico Mayo</span>
+              </h3>
+              <p>Lima</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=J:ChIJp1rtkWLGBZERhDtJzUieqSA#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">K</span> 
+                <span class="label label-default">Consultorio Dental Sonrie</span>
+              </h3>
+              <p>Los Rosales s/n, Lima</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=K:ChIJq6qqGYbGBZERvN6FHVpu-hw#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">L</span> 
+                <span class="label label-default">Hospital Jorge Voto Bernales</span>
+              </h3>
+              <p>Carretera Central, Santa Anita</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=L:ChIJbQW7BJrGBZERwkfFLB3GCkk#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">M</span> 
+                <span class="label label-default">Hospital EsSalud Jorge Voto Bernales</span>
+              </h3>
+              <p>Km. 3 1/2, Carretera Central, Santa Anita</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=M:ChIJfdNUHJrGBZERR-BJJGLUZGY#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">N</span> 
+                <span class="label label-default">Hospital Hermilio Valdizan</span>
+              </h3>
+              <p>Carretera Central, Santa Anita</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=N:ChIJEw-u65nGBZER_YDwslwx1QU#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">O</span> 
+                <span class="label label-default">Hospital EsSalud San Isidro Labrador</span>
+              </h3>
+              <p>Carretera Central, Lima</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=O:ChIJ3-lII5rGBZERQosCB89LUDc#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">P</span> 
+                <span class="label label-default">Hospital Hermilio Valdizán</span>
+              </h3>
+              <p>Carretera Central, Lima</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=P:ChIJlZ_6nJnGBZERfWRl7DEU0R0#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">Q</span> 
+                <span class="label label-default">Jockey Salud</span>
+              </h3>
+              <p>Avenida Javier Prado Este, Santiago de Surco</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=Q:ChIJc2Z7jbLHBZERlCVoSlOLHLI#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">R</span> 
+                <span class="label label-default">El Hospital de Baja Complejidad Vitarte</span>
+              </h3>
+              <p>5880, Avenida Nicolás de Ayllón, Ate</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=R:ChIJ-VhzIkLGBZERGZ6UM7dLAqQ#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">S</span> 
+                <span class="label label-default">Instituto de La Memoria y Enfermedades de Riesgo IMEDER</span>
+              </h3>
+              <p>Av. Constructores 1230 - La Molina - Lima (Frente al ESSALUD -Carlos, Alcántara ), Lima</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=S:ChIJqSSTsXLHBZERLui9bv1hkTg#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+              <h3>
+                <span class="label label-danger">T</span> 
+                <span class="label label-default">Dental Mendoza</span>
+              </h3>
+              <p>15022, Paracas 533, Lima</p>
+              <a href="?latitude=-12.072191199999999&longitude=-76.95201829999999&selected=T:ChIJzcWlgEnGBZERJa4yVLkXw_k#map">Pinpoint on map</a>
+            </li>
+
+                      <li class="list-group-item">
+                          </li>
+          </ul>
+          
+          <div class="footer">
+            <img src="powered-by-google-on-white.png" /> <br />
+            <a href="terms.html">Legal Notices</a>
+          </div>    
+    
+        </div>
+        
+        <!-- ATMs on map -->
+        <div role="tabpanel" class="tab-pane" id="map">           
+        </div>
+      </div>
+      
+      
+    </div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy8l6pVKTKWZJs_LgRo27zgurpV78XhMw"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>    
+    <script src="app.js"></script>    
+    <script>
+    $(document).ready(function() {
+    
+      var mapOptions = {
+        zoom: 18,
+        center: new google.maps.LatLng(-12.072191,-76.952018),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), mapOptions);  
+      
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(-12.072191,-76.952018),
+        map: map,
+        title: 'Current Location',
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 10,
+          strokeColor: 'green',
+        }
+
+      });    
+      marker.setMap(map);    
+      var infowindow = new google.maps.InfoWindow({
+          content: 'None'
+      });
+
+      
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.062437, -76.945772),
+          map: map,
+          title: 'A: Hospital Carlos Alcantar'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.062131, -76.945544),
+          map: map,
+          title: 'B: Hospital Nivel I Carlos Alcántara Butterfield'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.071578, -76.938476),
+          map: map,
+          title: 'C: Terapia del Dolor'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.062874, -76.962195),
+          map: map,
+          title: 'D: Clínica Docente UPC'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.075126, -76.937892),
+          map: map,
+          title: 'E: Corpus et Vita'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.070666, -76.968572),
+          map: map,
+          title: 'F: Posta Médica de villa victoria'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.056067, -76.957021),
+          map: map,
+          title: 'G: Puesto de Salud ATE'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.090364, -76.950833),
+          map: map,
+          title: 'H: CENTRO MEDICO SANNA'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.082328, -76.969077),
+          map: map,
+          title: 'I: Clinica San Felipe'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.050862, -76.965339),
+          map: map,
+          title: 'J: Centro Medico Mayo'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.048527, -76.960272),
+          map: map,
+          title: 'K: Consultorio Dental Sonrie'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.047361, -76.947436),
+          map: map,
+          title: 'L: Hospital Jorge Voto Bernales'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.047118, -76.947202),
+          map: map,
+          title: 'M: Hospital EsSalud Jorge Voto Bernales'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.046742, -76.945786),
+          map: map,
+          title: 'N: Hospital Hermilio Valdizan'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.045754, -76.947922),
+          map: map,
+          title: 'O: Hospital EsSalud San Isidro Labrador'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.045485, -76.945942),
+          map: map,
+          title: 'P: Hospital Hermilio Valdizán'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.08516, -76.977178),
+          map: map,
+          title: 'Q: Jockey Salud'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.061911, -76.981354),
+          map: map,
+          title: 'R: El Hospital de Baja Complejidad Vitarte'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.104645, -76.953598),
+          map: map,
+          title: 'S: Instituto de La Memoria y Enfermedades de Riesgo IMEDER'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+            var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-12.077713, -76.984775),
+          map: map,
+          title: 'T: Dental Mendoza'
+      });
+      marker.setMap(map);    
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<strong>' + this.getTitle() + '</strong>');
+        infowindow.open(map,this);      
+      });     
+      
+
+      $("a[href='#map']").on('shown.bs.tab', function(){
+        google.maps.event.trigger(map, 'resize');
+      });  
+  
+    });
+    </script>
+  </body>
+</html>
